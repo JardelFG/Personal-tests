@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="back_music">
+        <audio id="back_music__audio" preload="auto" loop>
+            <source src="../assets/audios/Royal_HollowKnight_Theme.wav" type="audio/wav">
+            Tu navegador no es compatible con este audio.
+        </audio>
+        <button id="back_music__btn_audio">🔇</button>
+    </div>
+    <div class="overlay" id="panelOverlay">
+        <div class="bg-overlay">
+          <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, nemo?</span>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate doloremque, exercitationem illo distinctio iste odio blanditiis dolor architecto alias esse ipsa a nesciunt, nam commodi vero quas asperiores earum dolorem. Veniam adipisci perferendis odio eos fugiat a recusandae eum soluta delectus suscipit, asperiores dicta labore maiores, pariatur iste doloremque ipsum!</p>
+          <button class="overlay-close" onclick="switchOverlay()">✖️</button>
+        </div>
+      </div>
+  
+      <header class="nav-style nav-padding">
+        <button class="overlay-open" onclick="switchOverlay()">☑️</button>
+        <nav>
+          <ul>
+            <span>Home</span>
+            <span>Product</span>
+            <span>About us</span>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+
+          <section class="main_map">
+            <article>
+              <h1>Hollow Night Map</h1>
+              <picture>
+                <img src="../assets/pictures/HollowKnightMap.webp" alt="world map">
+              </picture>
+            </article>
+          </section>
+        
+          <section class="main_characters">
+            <div>
+              <article>
+                  <h1>Hollow 🎩</h1>
+                  <p>Personaje principal (protagonista) del juego.</p>
+                  <picture>
+                    <img src="../assets/pictures/Hollow-Swamp.webp" alt="hollow image">
+                  </picture>
+                </article>
+            </div>
+            <div>
+                <article>
+                  <h1>Hornet 😈</h1>
+                  <p>Personaje importante del lore del juego, asi como villana.</p>
+                  <picture>
+                    <img src="../assets/pictures/Hornet.webp" alt="hornet image">
+                  </picture>
+                </article>
+                
+            </div>
+              </section>
+      </main>
+  
+      <script src="index.js"></script>
+</body>
+</html>

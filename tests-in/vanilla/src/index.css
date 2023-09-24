@@ -1,0 +1,101 @@
+body{
+    background:rgb(39, 43, 51);
+    border: 2px solid yellow;
+	margin: 0;
+}
+section{
+	border: 2px solid red;
+	padding: 1rem;
+	margin: 1.25rem .3125rem;
+}
+img{
+	border: 2px solid rebeccapurple;
+	width: 100%;
+	height: 400px;
+    object-fit: cover;
+}
+h1, p{
+    text-align: center;
+}
+
+/* music background */
+.back_music{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 1.25rem;
+}
+
+/* overlay style */
+.overlay-open{
+	position: absolute;
+	inset: 1;
+}
+.overlay-close{
+	position: absolute;
+	bottom: 0;
+}
+.bg-overlay{
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+}
+.overlay{
+	height: 100%;
+	position: fixed;
+	inset: 0;
+	padding: 0 100px 0 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	visibility: hidden;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 100;
+}
+.switch{
+	visibility: visible;
+}
+
+
+/* nav scroll style */
+.nav-padding{
+	padding: 20px 0;
+}
+.nav-style{
+	width: 100%;
+	color: black;
+	background: rgb(36, 31, 31);
+	top: 0;
+	left: 0;
+	z-index: 50;
+	transition : all 0.3s ease-out;
+}
+
+.scroll-on{
+	position: fixed;
+	padding: 10px 0;
+}
+
+nav ul{
+	display: flex;
+	list-style: none;
+	justify-content: space-evenly;
+	gap: 1.2rem;
+	margin: 0;
+}
+
+/* main style */
+/* main{} */
+
+.main_map h1{
+    font-size: x-large;
+}
+.main_characters{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
