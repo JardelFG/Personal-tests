@@ -3,6 +3,18 @@ body{
     border: 2px solid yellow;
 	margin: 0;
 }
+h1,h3,p{
+	text-align: center;
+}
+h3,ul{
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+
+
+
+
 section{
 	border: 2px solid red;
 	padding: 1rem;
@@ -14,9 +26,6 @@ img{
 	height: 400px;
     object-fit: cover;
 }
-h1, p{
-    text-align: center;
-}
 
 /* music background */
 .back_music{
@@ -25,9 +34,13 @@ h1, p{
     bottom: 0;
     margin: 1.25rem;
 }
+.back_music button{
+	background: #000040;
+}
 
 /* overlay style */
 .overlay-open{
+	background: rgba(53, 47, 47, 0.821);
 	position: absolute;
 	inset: 1;
 }
@@ -96,6 +109,26 @@ nav ul{
 .main_characters{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 1rem;
+    gap: 3rem;
+}
+.main_characters div{
+	display: flex;
+	gap: 1rem;
+}
+.main_characters article .statistics{
+	flex-direction: column;
+}
+.main_characters article .statistics .data-info ul{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 200px;
 }
 
+.game-notes span{
+	font-size: 1.5rem;
+}
+.game-notes ul li::before{
+	content: '▪️';
+	padding-right: 10px;
+}
