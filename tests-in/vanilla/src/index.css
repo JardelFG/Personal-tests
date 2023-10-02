@@ -138,6 +138,7 @@ nav ul{
 	flex-wrap: wrap;
 	justify-content: center;
 	text-align: center;
+	padding: 0 12rem 0 12rem;
 	gap: 2rem;
 }
 .enemies-list ul li{
@@ -157,16 +158,16 @@ nav ul{
 	padding-right: 10px;
 }
 
-.dialogue{
-	cursor: alias;
-}
 .pj-info{
 	cursor: pointer;
 }
-/* .tooltip {
+
+.tooltip {
 	position: relative;
 	display: inline-block;
+	cursor: text;
 }
+
 .tooltip::after{
 	visibility: hidden;
 	position: absolute;
@@ -182,19 +183,24 @@ nav ul{
 	opacity: 0;
 	transition: opacity 0.3s, visibility 0.3s;
 }
-  .tooltip::after {
+.tooltip::after {
 	content: attr(data-tooltip);
-  } */
-  /* .tooltip::after{
-	content: attr(data-tooltip-dialogue);
-  } */
-  /* .tooltip:hover::after{
+}
+.tooltip:hover::after{
 	visibility: visible;
 	opacity: 1;
-  } */
+}
+.tooltip img{
+	cursor: alias;
+}
+
 .switch-popover{
 	position: relative;
 	cursor: pointer;
+	transition: all .3s ease-in-out;
+}
+.switch-popover:hover{
+	color: white;
 }
 .popover-boss-info{
 	display: none;
@@ -207,8 +213,10 @@ nav ul{
 	clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 9% 88%, 0 100%);;
 	margin: 0;
 	padding: .9375rem;
-	cursor: default
+	cursor: default;
+	z-index: 50;
 }
+
 .popover-boss-info.active-ppv-bossList{
 	display: block;
 }

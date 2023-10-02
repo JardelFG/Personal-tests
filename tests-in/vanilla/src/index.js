@@ -35,13 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
  // Cerrar el popover al hacer clic en el botón de cierre
+ const popoverBoss = document.querySelector(`#boss-info`)
 
 const allBtn = document.querySelectorAll('.switch-popover')
-// const AllpopoverBoss = document.querySelectorAll('.popover-boss-info')
 allBtn.forEach(div=>{
   div.addEventListener('click', ()=>{
-   const divId = div.id
-   console.log(divId)
+    const divId = div.id
+    const popoverBoss = document.querySelector(`#short-description-${divId}`)
+    popoverBoss.classList.toggle("active-ppv-bossList")
+    console.log(popoverBoss)
   })
-  console.log(allBtn)
 })
