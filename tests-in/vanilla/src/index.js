@@ -46,3 +46,38 @@ allBtn.forEach(div=>{
     console.log(popoverBoss)
   })
 })
+
+// dialog logic
+const showButton = document.querySelector("#show-button");
+const progressBar = document.getElementById('progressBar')
+
+showButton.addEventListener("click", function () {
+  const alertDialog = document.querySelector("#alert-dialog");
+  alertDialog.showModal();
+});
+function restartProgressBar(){
+  progressBar.value = 50
+  progressBar.style.accentColor = 'green'
+}
+function reduccerProgress(){
+  switch(progressBar.value){
+    case 35:{
+      progressBar.value -=5
+      progressBar.style.accentColor = 'yellow'
+      break
+    }
+    case 20:{
+      progressBar.value -=5
+      progressBar.style.accentColor = 'red'
+      break
+    }
+    default:{
+      if( progressBar.value > 0){
+        progressBar.value -= 2
+      }else{
+        return
+      }
+    }
+  }
+}
+setInterval(reduccerProgress, 3000)

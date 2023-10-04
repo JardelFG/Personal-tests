@@ -643,23 +643,25 @@
             </ul>
           </section>
           
-          <section class="game-notes">
-            <span>Notas sobre el juego
-            </span>
+          <section class="hollowChibi">
             <div>
-              <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nostrum ipsam laboriosam natus dolorem officiis deserunt at in laborum harum.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
-                <li>Existen ciertos enemigos eliminados del juego de los cuales se puede encontrar información de como son.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
-              </ul>
+              <img src="../assets/pictures/hollowchibi.png" alt="imagen de hollow knight">
+                <dialog id="alert-dialog">
+                  <h3>Otorgale tu energía al pequeño hollow!</h3>
+                  <img src="../assets/pictures/hollowchibi.png" alt="Gandalf">
+                  <progress value="10" max="50" id="progressBar"></progress>
+                  <span><q>Triste...débil...uu</q></span>
+                  <button onclick="restartProgressBar()">Acariciar</button>
+                  <button onClick="this.parentElement.close()">Listo</button>
+                </dialog>
+                <button id="show-button">Dame un respiro</button>
             </div>
+              <iframe id="hollow-knight-iframe"
+               width="600" height="325" src="https://www.youtube.com/embed/hh4YjWIWisQ" title="Hollow Knight - Take a Walk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </section>
+
+          
+
       </main>
   
       <script src="index.js"></script>
