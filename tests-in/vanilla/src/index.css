@@ -1,10 +1,36 @@
+@font-face {
+	font-family: Jost;
+	src: url(../assets/fonts/jost-vf.woff2) format("woff2");
+}
+:root{
+	--primary-font: 'Jost';
+	--primaryColor: white;
+	--SecondColor: black;
+	--colorBar-red: #ff0f1c;
+	--primaryBackground: rgb(39, 43, 51);
+	--secondBackground: linear-gradient(#000d, #000a);
+	--thirdBackground: #000040;
+	--fourthBackground: rgb(26, 29, 34);
+	--tooltipBackground: #333;
+	--backgroundNav: rgb(36, 31, 31);
+	--overlayBackground: rgba(0, 0, 0, 0.8);
+	--borderColorbody: .125rem solid yellow;
+	--borderColorImg: .125rem solid rebeccapurple;
+	--borderColorSection: .125rem solid red;
+	--borderColorNav: .0625rem solid white;
+
+}
+::-webkit-scrollbar{
+	display: none;
+}
 body{
-    background:rgb(39, 43, 51);
-    border: 2px solid yellow;
+    background:var(--primaryBackground);
+    border: var(--borderColorbody);
 	margin: 0;
 }
 h1,h3,p{
 	text-align: center;
+	font-family: var(--primary-font);
 }
 h3,ul{
 	margin: 0;
@@ -13,12 +39,12 @@ h3,ul{
 }
 
 section{
-	border: 2px solid red;
+	border: var(--borderColorSection);
 	padding: 1rem;
 	margin: 1.25rem .3125rem;
 }
 img{
-	border: 2px solid rebeccapurple;
+	border: var(--borderColorImg);
 	width: 100%;
     object-fit: cover;
 }
@@ -31,37 +57,39 @@ img{
     margin: 1.25rem;
 }
 .back_music button{
-	background: #000040;
+	background: var(--thirdBackground);
 }
 
 /* overlay style */
 .overlay-open{
-	background: rgba(53, 47, 47, 0.821);
+	background: var(--overlayBackground);
 	position: absolute;
 	inset: 1;
 }
 .overlay-close{
 	position: absolute;
+	margin: .625rem;
 	bottom: 0;
 }
 .bg-overlay{
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.8);
+	background: var(--overlayBackground);
+	padding: 2.5rem;
 }
 .overlay{
 	height: 100%;
 	position: fixed;
 	inset: 0;
-	padding: 0 100px 0 100px;
+	padding: 0 6.25rem 0 6.25rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: white;
+	color: var(--primaryColor);
 	visibility: hidden;
 	text-align: center;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: var(--overlayBackground);
 	z-index: 100;
 }
 .switch{
@@ -71,13 +99,13 @@ img{
 
 /* nav scroll style */
 .nav-padding{
-	padding: 20px 0;
+	padding: 1.25rem 0;
 }
 .nav-style{
 	width: 100%;
-	color: black;
-	border: 1px solid white;
-	background: rgb(36, 31, 31);
+	color: var(--SecondColor);
+	border: var(--borderColorNav);
+	background: var(--backgroundNav);
 	top: 0;
 	left: 0;
 	z-index: 50;
@@ -86,7 +114,7 @@ img{
 
 .scroll-on{
 	position: fixed;
-	padding: 10px 0;
+	padding: .625rem 0;
 }
 
 nav ul{
@@ -108,7 +136,7 @@ nav ul{
     gap: 3rem;
 }
 .main_characters img{
-	height: 400px;
+	height: 25rem;
 }
 .animation-reveal{
 	animation: auto linear reveal both;
@@ -130,7 +158,7 @@ nav ul{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	height: 200px;
+	height: 12.5rem;
 }
 .enemies-list ul{
 	display: flex;
@@ -144,17 +172,22 @@ nav ul{
 	width: min-content;
 }
 .enemies-list img{
-	width: 100px;
+	width: 6.25rem;
 	border-radius: 50%;
-	height: 100px;
+	height: 6.25rem;
 }
 
+/* notes of game */
 .game-notes span{
 	font-size: 1.5rem;
+	font-family: 'Jost';
+}
+.game-notes ul li{
+	font-family: 'Jost';
 }
 .game-notes ul li::before{
 	content: '▪️';
-	padding-right: 10px;
+	padding-right: .625rem;
 }
 
 
@@ -175,8 +208,8 @@ nav ul{
 	bottom: 100%;
 	left: 100%;
 	transform: translateX(-50%);
-	background-color: #333;
-	color: #fff;
+	background-color: var(--tooltipBackground);
+	color: var(--primaryColor);
 	border-radius: 1rem;
 	padding: .3125rem;
 	border-radius: .1875rem;
@@ -201,15 +234,15 @@ nav ul{
 	transition: all .3s ease-in-out;
 }
 .switch-popover:hover{
-	color: white;
+	color: var();
 }
 .popover-boss-info{
 	display: none;
 	position: absolute;
-	width: 200px;
+	width: 12.5rem;
 	left: 100%;
 	bottom: 100%;
-	background: rgb(26, 29, 34);
+	background: var(--fourthBackground);
 	font-weight: 900;
 	clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 9% 88%, 0 100%);;
 	margin: 0;
@@ -228,7 +261,6 @@ nav ul{
 	display: flex;
 	justify-content: space-around;
 	align-items: end;
-	/* gap: 1.875rem; */
 }
 .hollowChibi div{
 	display: flex;
@@ -241,12 +273,12 @@ dialog button, dialog span, dialog progress{
 	margin: .3125rem 0 .3125rem 0;	
 }
 #progressBar{
-	accent-color: red;
+	accent-color: var(--colorBar-red);
 }
 .hollowChibi img, dialog img{
 	width: 18.75rem;
 }
 #alert-dialog::backdrop {
-	background: linear-gradient(#000d, #000a);
+	background: var(--secondBackground);
 	
 }

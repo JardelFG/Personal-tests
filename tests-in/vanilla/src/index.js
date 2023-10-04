@@ -57,18 +57,18 @@ showButton.addEventListener("click", function () {
 });
 function restartProgressBar(){
   progressBar.value = 50
-  progressBar.style.accentColor = 'green'
+  progressBar.style.accentColor = '#217500'
 }
 function reduccerProgress(){
   switch(progressBar.value){
-    case 35:{
-      progressBar.value -=5
-      progressBar.style.accentColor = 'yellow'
+    case 36:{
+      progressBar.value -=2
+      progressBar.style.accentColor = '#ffed58'
       break
     }
     case 20:{
-      progressBar.value -=5
-      progressBar.style.accentColor = 'red'
+      progressBar.value -=2
+      progressBar.style.accentColor = 'ff0f1c'
       break
     }
     default:{
