@@ -6,6 +6,7 @@
     <title>Vanilla</title>
     <link rel="stylesheet" href="index.css">
     <link rel="preload" href="../assets/fonts/jost-vf.woff2" as="font" crossorigin>
+    <link rel="preload" href="../assets/fonts/victor-mono-500.woff2" as="font" crossorigin>
   </head>
   <body>
     <div class="back_music">
@@ -24,18 +25,26 @@
       </div>
   
       <header class="nav-style nav-padding">
-        <button class="overlay-open" onclick="switchOverlay()">☑️</button>
+        <button class="overlay-open" onclick="switchOverlay()" type="button">☑️</button>
         <nav>
           <ul>
-            <span>World Map</span>
-            <span>Boss-List</span>
-            <span>Notes</span>
+            <span>
+              <a href="#worldMap">World Map</a>
+            </span>
+            <span>
+              <a href="#bossList">Boss List</a>
+            </span>
+            <span>
+              <a href="#game-notes">Notes</a>
+            </span>
+            <span><a href="../src/wiki/wikipedia.html">Libreria</a></span>
           </ul>
         </nav>
       </header>
+
       <main class="main">
 
-          <section class="main_map">
+          <section class="main_map" id="worldMap">
             <article>
               <h1>Hollow Night Map World</h1>
               <picture>
@@ -115,7 +124,7 @@
             </div>
           </section>
           
-          <section class="enemies-list">
+          <section class="enemies-list" id="bossList">
             <h1>Lista de Bosses</h1>
             <ul>
 
@@ -171,7 +180,7 @@
                 class="switch-popover">
                   <span>Mawlek inquietante</span>
                   <div class="popover-boss-info" id="short-description-popover-boss-3">
-                    <div>>Hermanos del clavo, entrenados en combate por el Gran Nailsage
+                    <div>Hermanos del clavo, entrenados en combate por el Gran Nailsage
                     </div>
                     <span>↗️</span>
                   </div>
@@ -493,10 +502,9 @@
               </li>
 
               <li>
-                <pictu
+                <picture
                 class="tooltip"
-                data-tooltip="... ANTIGUO ENEMIGO ..."
-                re>
+                data-tooltip="... ANTIGUO ENEMIGO ...">
                   <img src="../assets/pictures/Enemies-boss/Radiance_Icon.webp" alt="">
                 </picture>
                 <div
@@ -512,16 +520,11 @@
               </li>
 
               <li>
-                <picture>
-                  <img
-                  class="tooltip"
-                  data-tooltip="¡El Rey cae, pero yo vivo para siempre!"
-                  src="../assets/pictures/Enemies-boss/Soul_Master_Icon.webp" alt="">
+                <picture
+                class="tooltip"
+                data-tooltip="¡El Rey cae, pero yo vivo para siempre!">
+                  <img src="../assets/pictures/Enemies-boss/Soul_Master_Icon.webp" alt="">
                 </picture>
-                <span
-                class="tooltip pj-info" 
-                data-tooltip="">
-                </span>
                 <div
                 id="popover-boss-22"
                 class="switch-popover">
@@ -663,7 +666,43 @@
                width="600" height="325" src="https://www.youtube.com/embed/hh4YjWIWisQ" title="Hollow Knight - Take a Walk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </section>
 
+          <section>
+            <form action="#">
+              <input type="text" list="items" placeholder="text">
+              <datalist id="items">
+                <option>Hollow</option>
+                <option>Hornet</option>
+                <option>Radiant</option>
+                <option>Radiant</option>
+              </datalist>
+            </form>
 
+            <details>
+              <summary>statistics</summary>
+              <span>feliz lunes</span><br>
+              <span>feliz martes</span><br>
+              <span>feliz miercoles</span><br>
+            </details>
+          </section>
+
+          <section class="game-notes" id="game-notes">
+            <span>Notas sobre el juego</span>
+            <div>
+              <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nostrum ipsam laboriosam natus dolorem officiis deserunt at in laborum harum.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
+                <li>Existen ciertos enemigos eliminados del juego de los cuales se puede encontrar información de como son.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
+              </ul>
+            </div>
+          </section>
+
+          
       </main>
   
       <script src="index.js"></script>

@@ -2,8 +2,13 @@
 	font-family: Jost;
 	src: url(../assets/fonts/jost-vf.woff2) format("woff2");
 }
+@font-face {
+	font-family: VictorMono;
+	src: url(../assets/fonts//victor-mono-500.woff2) format("woff2");
+}
 :root{
 	--primary-font: 'Jost';
+	--second-font: 'VictorMono';
 	--primaryColor: white;
 	--SecondColor: black;
 	--colorBar-red: #ff0f1c;
@@ -36,6 +41,10 @@ h3,ul{
 	margin: 0;
 	list-style: none;
 	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: white;
 }
 
 section{
@@ -124,6 +133,9 @@ nav ul{
 	gap: 1.2rem;
 	margin: 0;
 }
+nav span{
+	color: white;
+}
 
 /* main style */
 
@@ -178,16 +190,18 @@ nav ul{
 }
 
 /* notes of game */
+.game-notes{
+	font-family: var(--primary-font);
+}
 .game-notes span{
 	font-size: 1.5rem;
-	font-family: 'Jost';
 }
-.game-notes ul li{
-	font-family: 'Jost';
+.game-notes div ul{
+	padding: 0 0 0 1.25rem;
 }
-.game-notes ul li::before{
-	content: '▪️';
-	padding-right: .625rem;
+.game-notes div ul li::marker{
+	content: "➡️";
+	margin: .625rem;
 }
 
 
@@ -233,8 +247,12 @@ nav ul{
 	cursor: pointer;
 	transition: all .3s ease-in-out;
 }
+.switch-popover span{
+	font-family: var(--second-font);
+
+}
 .switch-popover:hover{
-	color: var();
+	color: var(--primaryColor);
 }
 .popover-boss-info{
 	display: none;
@@ -244,6 +262,7 @@ nav ul{
 	bottom: 100%;
 	background: var(--fourthBackground);
 	font-weight: 900;
+	letter-spacing: .0625rem;
 	clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 9% 88%, 0 100%);;
 	margin: 0;
 	padding: .9375rem;
