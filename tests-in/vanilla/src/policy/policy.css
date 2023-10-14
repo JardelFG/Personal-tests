@@ -1,0 +1,23 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin: 0 6.25rem 6.25rem 6.25rem;
+}
+header{
+    position: relative;
+    display: flex;
+    padding: .625rem;
+    font-family: 'Jost', sans-serif;
+    align-items: center;
+}
+header button{
+    background: rgba(28, 29, 31, 0.4);
+    border-radius: 0% 100% 45% 55% / 18% 54% 46% 82%;
+    padding: .625rem;
+    cursor: pointer;
+}
+header button:hover{
+    scale: 1.1;
+    background: rgba(28, 29, 31, 0.9);
+}
