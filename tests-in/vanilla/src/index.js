@@ -1,6 +1,9 @@
+const $ = selector => document.querySelector(selector)
+const $$ = selector => document.querySelectorAll(selector)
+
 // music background
-const bgAudio = document.getElementById("back_music__audio")
-const btnAudio = document.getElementById("back_music__btn_audio")
+const bgAudio = $("#back_music__audio")
+const btnAudio = $("#back_music__btn_audio")
 btnAudio.addEventListener('click', ()=>{
     if(bgAudio.volume === 1){
       bgAudio.volume = 0
@@ -11,14 +14,14 @@ btnAudio.addEventListener('click', ()=>{
 
 // overlay logic
 function switchOverlay(){
-    const overlay = document.getElementById("panelOverlay")
+    const overlay = $("#panelOverlay")
     
     overlay.classList.toggle("switch")
 }
 
 // nav scroll style
 document.addEventListener("DOMContentLoaded", function() {
-    var header = document.querySelector(".nav-padding")
+    var header = $(".nav-padding")
   
     window.addEventListener("scroll", function() {
       var scroll = window.scrollY || document.documentElement.scrollTop
@@ -35,25 +38,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
  // Cerrar el popover al hacer clic en el botón de cierre
- const popoverBoss = document.querySelector(`#boss-info`)
+ const popoverBoss = $(`#boss-info`)
 
-const allBtn = document.querySelectorAll('.switch-popover')
+const allBtn = $$('.switch-popover')
 allBtn.forEach(div=>{
   div.addEventListener('click', ()=>{
     const divId = div.id
-    const popoverBoss = document.querySelector(`#short-description-${divId}`)
+    const popoverBoss = $(`#short-description-${divId}`)
     popoverBoss.classList.toggle("active-ppv-bossList")
     console.log(popoverBoss)
   })
 })
 
-// dialog logic
-const showButton = document.querySelector("#show-button");
-const progressBar = document.getElementById('progressBar')
+// dialog logic hollow chibi
+const btnHollowChibi = $("#show-dialog_hollowChibi");
+const progressBar = $('#progressBar')
 
-showButton.addEventListener("click", function () {
-  const alertDialog = document.querySelector("#alert-dialog");
-  alertDialog.showModal();
+btnHollowChibi.addEventListener("click", function () {
+  const alertDialogHollowChibi = $("#alert-dialog_hollowChibi");
+  alertDialogHollowChibi.showModal();
 });
 function restartProgressBar(){
   progressBar.value = 50
@@ -81,3 +84,25 @@ function reduccerProgress(){
   }
 }
 setInterval(reduccerProgress, 3000)
+
+// caoursel *pendiente*
+// const carousel = $('.slider-item');
+// const btnActive = $('#btn-active');
+
+// const interval = setInterval(() => {
+//   // Detener el scroll snap
+//   carousel.scrollSnapStop();
+
+//   // Mover el scroll a la siguiente posición de referencia
+//   carousel.scrollTo(0, carousel.scrollHeight);
+
+//   // Reactivar el scroll snap
+//   carousel.scrollSnapStart();
+// }, 1000); // 3 segundos
+
+// // Agrega un evento de click para detener el scroll snap
+// btnActive.addEventListener('click', () => {
+//   clearInterval(interval);
+// });
+
+

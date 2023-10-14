@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills</title>
+    <link rel="preload" href="../../assets/fonts/jost-vf.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="../wiki/wikipedia.css">
 </head>
 <body>
+    <div id="panelOverlay" class="invisible">
+        <blockquote>
+            "Se iba a lanzar en la primera mitad de 2023 pero según miembros de Team Cherry, la visión de la esperada secuela ha aumentado y han decidido tomarse más tiempo de desarrollo para entregar la mejor versión posible."
+            <br>
+            <cite>-- Phillip Chu Joy</cite>
+        </blockquote>
+        <div class="container">
+            <div class="wrapper">
+                <div class="ticket">
+                    <img 
+                    src="../../assets/pictures/Banner-Silksong_cover.webp" alt="banner de hollow knight silksong">
+                    <span onclick="guieOverlay()">Proximamente...</span>
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+        <blockquote>
+            "Cuenta la leyenda que Hollow Knight Silksong en realidad son los amigos que hacemos en el camino..."
+            <br>
+            <cite>-- Anónimo</cite>
+        </blockquote>
+    </div>
     <header>
         <a href="../index.html">
             <button type="button">Regresar</button>
@@ -14,65 +37,168 @@
         <h1>Libreria de hollow knight</h1>
     </header>
     <main>
-        <section class="table-content">
-            <h2>Temas:</h2>
-            <article>
-                <ul>
-                    <li><a href="#game-description">Inicio</a></li>
-                    <li>
-                        <a href="#pj-main">Personaje principal</a>
-                    </li>
-                    <li>
-                        <details>
-                            <summary><a href="#skills">Habilidades</a></summary>
-                            <p><a href="#active-skills">Habilidades Activas</a></p>
-                            <p><a href="#passive-skills">Habilidades pasivas</a></p>
-                        </details>
-                    </li>
-                    <li>
-                        <details>
-                            <summary><a href="#npcs">Npc's</a></summary>
-                            <details>
-                                <summary>Comerciantes</summary>
-                                <div>
-                                    <p><a href="#nailSmith">Nailsmith</a></p>
-                                    <p><a href="#salubra">Charm Lover Salubra</a></p>
-                                    <p><a href="#confessorJiji">Confessor Jiji</a></p>
-                                    <p><a href="#iselda">Iselda</a></p>
-                                    <p><a href="#legEater">Leg Eater</a></p>
-                                    <p><a href="#banker">Millibelle the Banker</a></p>
-                                    <p><a href="#lastStag">The Last Stag</a></p>
-                                    <p><a href="#seekerLem">Relic Seeker Lemm</a></p>
-                                    <p><a href="#tuk">Tuk</a></p>
-                                    <p><a href="#divine"> Divine</a></p>
-                                </div>
-                            </details>
-                            <details>
-                                <summary>Errantes</summary>
-                                <div>
-                                    <p><a href="#nailSmith">Nailsmith</a></p>
-                                    <p><a href="#salubra">Charm Lover Salubra</a></p>
-                                    <p><a href="#confessorJiji">Confessor Jiji</a></p>
-                                    <p><a href="#iselda">Iselda</a></p>
-                                    <p><a href="#legEater">Leg Eater</a></p>
-                                    <p><a href="#banker">Millibelle the Banker</a></p>
-                                    <p><a href="#lastStag">The Last Stag</a></p>
-                                    <p><a href="#seekerLem">Relic Seeker Lemm</a></p>
-                                    <p><a href="#tuk">Tuk</a></p>
-                                    <p><a href="#divine"> Divine</a></p>
-                                </div>
-                            </details>
-                        </details>
-                    </li>
-                    <li>
-                        <details>
-                            <summary><a href="#Areas">Areas</a></summary>
-                        </details>
-                    </li>
-                </ul>
-            </article>
+        <section class="table-content" id="tableContent">
+            <div class="table-content_pinned-container">
+                <div class="table-content_pinned">
+                    <h2>Temas:</h2>
+                    <article>
+                        <ul>
+                            <li><a href="#game-description">Inicio</a></li>
+                            <li>
+                                <a href="#pj-main">Personaje principal</a>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary><a href="#skills">Habilidades</a></summary>
+                                    <p><a href="#active-skills">Habilidades Activas</a></p>
+                                    <p><a href="#passive-skills">Habilidades pasivas</a></p>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary><a href="#npcs">Npc's</a></summary>
+                                    <details>
+                                        <summary>Comerciantes</summary>
+                                        <div>
+                                            <p>
+                                                <a href="#nailSmith">Nailsmith</a>
+                                            </p>
+                                            <p>
+                                                <a href="#salubra">Charm Lover Salubra</a>
+                                            </p>
+                                            <p>
+                                                <a href="#confessorJiji">Confessor Jiji</a>
+                                            </p>
+                                            <p>
+                                                <a href="#iselda">Iselda</a>
+                                            </p>
+                                            <p>
+                                                <a href="#legEater">Leg Eater</a>
+                                            </p>
+                                            <p>
+                                                <a href="#banker">Millibelle the Banker</a>
+                                            </p>
+                                            <p>
+                                                <a href="#lastStag">The Last Stag</a>
+                                            </p>
+                                            <p>
+                                                <a href="#seekerLem">Relic Seeker Lemm</a>
+                                            </p>
+                                            <p>
+                                                <a href="#tuk">Tuk</a>
+                                            </p>
+                                            <p>
+                                                <a href="#divine"> Divine</a>
+                                            </p>
+                                        </div>
+                                    </details>
+                                    <details>
+                                        <summary>Errantes</summary>
+                                        <div>
+                                            <p>
+                                                <a href="#nailSmith">Nailsmith</a>
+                                            </p>
+                                            <p>
+                                                <a href="#salubra">Charm Lover Salubra</a>
+                                            </p>
+                                            <p>
+                                                <a href="#confessorJiji">Confessor Jiji</a>
+                                            </p>
+                                            <p>
+                                                <a href="#iselda">Iselda</a>
+                                            </p>
+                                            <p>
+                                                <a href="#legEater">Leg Eater</a>
+                                            </p>
+                                            <p>
+                                                <a href="#banker">Millibelle the Banker</a>
+                                            </p>
+                                            <p>
+                                                <a href="#lastStag">The Last Stag</a>
+                                            </p>
+                                            <p>
+                                                <a href="#seekerLem">Relic Seeker Lemm</a>
+                                            </p>
+                                            <p>
+                                                <a href="#tuk">Tuk</a>
+                                            </p>
+                                            <p>
+                                                <a href="#divine"> Divine</a>
+                                            </p>
+                                        </div>
+                                    </details>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary><a href="#Areas">Areas</a></summary>
+                                    <div>
+                                        <p>
+                                            <a href="#dirtmouth">Bocasucia/a>
+                                        </p>
+                                        <p>
+                                            <a href="#cityTears">Ciudad de Lágrimas</a>
+                                        </p>
+                                        <p>
+                                            <a href="#colosseumFools">Coliseo de los Insensatos</a>
+                                        </p>
+                                        <p>
+                                            <a href="#crystalPeak">Cumbre de Cristal</a>
+                                        </p>
+                                        <p>
+                                            <a href="#deepnest">Nido Profundo</a>
+                                        </p>
+                                        <p>
+                                            <a href="#royalWaterways">Canales Reales</a>
+                                        </p>
+                                        <p>
+                                            <a href="#fogCanyon">Cañón Nublado</a>
+                                        </p>
+                                        <p>
+                                            <a href="#forgottenCrossroads">Cruces Olvidados</a>
+                                        </p>
+                                        <p>
+                                            <a href="#godHome">Hogar de Dioses</a>
+                                        </p>
+                                        <p>
+                                            <a href="#queensGarden">Jardines de la Reina</a>
+                                        </p>
+                                        <p>
+                                            <a href="#theHive">La Colmena</a>
+                                        </p>
+                                        <p>
+                                            <a href="#kingdomEdge">Límite del Reino</a>
+                                        </p>
+                                        <p>
+                                            <a href="#whitePalace">Palacio Blanco</a>
+                                        </p>
+                                        <p>
+                                            <a href="#fungalWastes">Páramos Fúngicos</a>
+                                        </p>
+                                        <p>
+                                            <a href="#greenpPath">Sendero Verde</a>
+                                        </p>
+                                        <p>
+                                            <a href="#howlingCliffs">Acantilados Aulladores </a>
+                                        </p>
+                                        <p>
+                                            <a href="#restingGrounds">Tierras de Reposo</a>
+                                        </p>
+                                        <p>
+                                            <a href="#theAbyss">El Abismo</a>
+                                        </p>
+                                    </div>
+                                </details>
+                            </li>
+                            <li>
+                                <a href="#hollowSilksong">Silksong</a>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
         </section>
-        <section class="main-content">
+        <section class="main-content" id="mainContent">
             <article>
                 <div class="game-description" id="game-description">
                     <div>
@@ -387,68 +513,80 @@
                     <li>
                         <article id="confessorJiji">
                             <h4>Confesora Jiji</h4>
-                            <img src="#" alt="imagen del personaje confesora Jiji">
-                            <p>
-                                Un NPC que se encuentra tras una puerta cerrada al este de Bocasucia. Requiere tener una Llave simple para abrirla.A cambio de Huevos podridos, traerá la Sombra del Caballero desde cualquier lugar.
-                            </p>
+                            <div class="npcs-content">
+                                <img src="../../assets/pictures/Npc's/Comerciantes/Jiji_Circle.webp" alt="imagen del personaje confesora Jiji">
+                                <p>
+                                    Un Npc que se encuentra tras una puerta cerrada al este de Bocasucia. Requiere tener una Llave simple para abrirla.A cambio de Huevos podridos, traerá la Sombra del Caballero desde cualquier lugar.
+                                </p>
+                            </div>
                         </article>
                     </li>
                     <li>
                         <article id="iselda">
                             <h4>Iselda</h4>
-                            <img src="#" alt="imagen del personaje Iselda">
-                            <p>
-                                Iselda es la esposa de Cornifer. Aparecerá en su tienda en Bocasucia después de encontrarse el jugador con Cornifer por primera vez en Cruces Olvidados.Vende mapas y herramientas para cartografiar mientras se queja del poco tiempo que Cornifer pasa en casa.
-                            </p>
+                            <div class="npcs-content">
+                                <img src="../../assets/pictures/Npc's/Comerciantes/Iselda_Circle.webp" alt="imagen del personaje Iselda">
+                                <p>
+                                    Iselda es la esposa de Cornifer. Aparecerá en su tienda en Bocasucia después de encontrarse el jugador con Cornifer por primera vez en Cruces Olvidados.Vende mapas y herramientas para cartografiar mientras se queja del poco tiempo que Cornifer pasa en casa.
+                                </p>
+                            </div>
                         </article>
                     </li>
                     <li>
                         <article id="legEater">
-                            <h4>Confesora Jiji</h4>
-                            <img src="#" alt="imagen del personaje Legeater">
-                            <p>
-                                Un comerciante NPC que se encuentra en Páramos Fúngicos, cerca de la entrada a Cruces Olvidados.En el primer encuentro, se ofrecerá a enseñarle "algo bonito" al jugador por Geo86. Tras pagar, será posible comprar Amuletos frágiles.Si el jugador se equipa el Blasón del defensor, venderá y reparará los amuletos con un 25% de descuento.
-                            </p>
+                            <h4>Come piernas</h4>
+                            <div class="npcs-content">
+                                <img src="../../assets/pictures/Npc's/Comerciantes/Legeater_Circle.webp" alt="imagen del personaje Legeater">
+                                <p>
+                                    Un comerciante NPC que se encuentra en Páramos Fúngicos, cerca de la entrada a Cruces Olvidados.En el primer encuentro, se ofrecerá a enseñarle "algo bonito" al jugador por Geo86. Tras pagar, será posible comprar Amuletos frágiles.Si el jugador se equipa el Blasón del defensor, venderá y reparará los amuletos con un 25% de descuento.
+                                </p>
+                            </div>
                         </article>
                     </li>
                     <li>
                         <article id="banker">
-                            <h4>Confesora Jiji</h4>
-                            <img src="#" alt="imagen del personaje banquera">
-                            <p>
-                                En la base de Cañón Nublado se encuentra el Banco de Millibelle, donde a cambio de una tarifa inicial de Geo100 guardará el Geo del Caballero. El Geo depositado no desaparecerá al morir y podrá ser retirado en cualquier momento.Guardará un máximo de Geo4500 pero desaparecerá con todo el Geo si el jugador deposita más de Geo2500 y se sienta en un banco.
-                            </p>
+                            <h4>Millibelle</h4>
+                            <div class="npcs-content">
+                                <img src="../../assets/pictures/Npc's/Comerciantes/Millibelle_Circle.webp" alt="imagen del personaje banquera">
+                                <p>
+                                    En la base de Cañón Nublado se encuentra el Banco de Millibelle, donde a cambio de una tarifa inicial de Geo100 guardará el Geo del Caballero. El Geo depositado no desaparecerá al morir y podrá ser retirado en cualquier momento.Guardará un máximo de Geo4500 pero desaparecerá con todo el Geo si el jugador deposita más de Geo2500 y se sienta en un banco.
+                                </p>
+                            </div>
                         </article>
                     </li>
                     <li>
                         <article id="Nailsmith">
                             <h4>Forjaguijones</h4>
-                            <img src="#" alt="imagen del personaje Forjaguijones">
-                            <p>
-                                Se encuentra en Ciudad de Lágrimas, al fondo a la izquierda de la parte inferior del mapa dentro de su choza.Mejorará por primera vez el aguijón del jugador pidiendo únicamente Geo. Para las demás mejoras requerirá además Mineral Pálido.
-                            </p>
+                            <div class="npcs-content">
+                                <img src="../../assets/pictures/Npc's/Comerciantes/Nailsmith_Circle.webp" alt="imagen del personaje Forjaguijones">
+                                <p>
+                                    Se encuentra en Ciudad de Lágrimas, al fondo a la izquierda de la parte inferior del mapa dentro de su choza.Mejorará por primera vez el aguijón del jugador pidiendo únicamente Geo. Para las demás mejoras requerirá además Mineral Pálido.
+                                </p>
+                            </div>
                         </article>
                     </li>
                     <li>
                         <article id="seekerLem">
                             <h4>Lemm</h4>
-                            <img src="#" alt="imagen del personaje Lemm">
-                            <p>
-                                SBuscador de Reliquias Lemm se encuentra en una alta torre en Ciudad de Lágrimas, a la izquierda de la fuente.
-
-                                Te ofrecerá Geo a cambio de reliquias del reino.
-                                
-                                Se recomienda guardarse las reliquias y venderlas únicamente cuando se necesite comprar algo. Debido a que no desaparecen al morir y resulta más fácil venderlas que conseguir geo derrotando enemigos.
-                            </p>
+                            <div class="npcs-content">
+                                <img src="../../assets/pictures/Npc's/Comerciantes/Lemm_Circle.webp" alt="imagen del personaje Lemm">
+                                <p>
+                                    SBuscador de Reliquias Lemm se encuentra en una alta torre en Ciudad de Lágrimas, a la izquierda de la fuente.
+                                    Te ofrecerá Geo a cambio de reliquias del reino.
+                                    Se recomienda guardarse las reliquias y venderlas únicamente cuando se necesite comprar algo. Debido a que no desaparecen al morir y resulta más fácil venderlas que conseguir geo derrotando enemigos.
+                                </p>
+                            </div>
                         </article>
                     </li>
                     <li>
                         <article id="salubra">
                             <h4>Salubra</h4>
-                            <img src="#" alt="imagen del personaje Salubra">
-                            <p>
-                                Salubra es una babosa mercader en Hollow Knight. Ella colecciona y vende Amuletos y Muescas.La tienda de Salubra está ubicada arriba del pueblo abandonado en el fondo de los Cruces Olvidados, cerca del Lago Azul.
-                            </p>
+                            <div class="npcs-content">
+                                <img src="../../assets/pictures/Npc's/Comerciantes/Salubra_Circle.webp" alt="imagen del personaje Salubra">
+                                <p>
+                                    Salubra es una babosa mercader en Hollow Knight. Ella colecciona y vende Amuletos y Muescas.La tienda de Salubra está ubicada arriba del pueblo abandonado en el fondo de los Cruces Olvidados, cerca del Lago Azul.
+                                </p>
+                            </div>
                         </article>
                     </li>
                 </ul>
@@ -457,52 +595,287 @@
                     <li>
                         <article id="señorSeta">
                             <h4>Señor Seta</h4>
-                            <img src="#" alt="imagen del personaje Señor Seta">
-                            <p>
-                                El Señor Seta es una seta parlante que se encuentra a través de varios lugares en Hallownest después de que el jugador ha progresado más allá de cierto punto. Sus balbuceos se pueden escuchar desde lejos, guiando al jugador a su ubicación.Encontrarlo en los siete lugares recompensa el logro Cambio de era y una escena secreta después de que el jugador haya pasado el juego.Para entender lo que dice, el jugador debe equipar el amuleto Hongo con esporas, de lo contrario, hablará un galimatías y no se moverá a la siguiente ubicación.
-                            </p>
+                            <div class="npcs-content">
+                                <img src="../../assets/pictures/Npc's/Errantes/Mister_Mushroom_Circle.webp" alt="imagen del personaje Señor Seta">
+                                <p>
+                                    El Señor Seta es una seta parlante que se encuentra a través de varios lugares en Hallownest después de que el jugador ha progresado más allá de cierto punto. Sus balbuceos se pueden escuchar desde lejos, guiando al jugador a su ubicación.Encontrarlo en los siete lugares recompensa el logro Cambio de era y una escena secreta después de que el jugador haya pasado el juego.Para entender lo que dice, el jugador debe equipar el amuleto Hongo con esporas, de lo contrario, hablará un galimatías y no se moverá a la siguiente ubicación.
+                                </p>
+                            </div>
                         </article>
                     </li>
                     <li>
                         <article id="quirrel">
                             <h4>Quirrel</h4>
-                            <img src="#" alt="imagen del personaje Quirrel">
-                            <p>
-                                Quirrel es uno de los principales NPCs de Hollow Knight, es un viejo explorador que ha olvidado su pasado de forma literal y ahora busca conocer los misterios de Hallownest.Si bien Quirrel no es un guerrero, sino un simple explorador, conoce los peligros del reino y sabe manejar su aguijón en caso de urgencia o necesidad. Ésto se puede ver en la pelea contra Uumuu, en los Archivos de la maestra.
-                            </p>
+                            <div class="npcs-content">
+                                <img src="../../assets/pictures/Npc's/Errantes/Quirrel_Circle.webp" alt="imagen del personaje Quirrel">
+                                <p>
+                                    Quirrel es uno de los principales NPCs de Hollow Knight, es un viejo explorador que ha olvidado su pasado de forma literal y ahora busca conocer los misterios de Hallownest.Si bien Quirrel no es un guerrero, sino un simple explorador, conoce los peligros del reino y sabe manejar su aguijón en caso de urgencia o necesidad. Ésto se puede ver en la pelea contra Uumuu, en los Archivos de la maestra.
+                                </p>
+                            </div>
                         </article>
                     </li>
                     <li>
                         <article id="cornifer">
                             <h4>Cornifer</h4>
-                            <img src="#" alt="imagen del personaje Cornifer">
-                            <p>
-                                El jugador se encuentra por primera vez a Cornifer en el fondo de Cruces Olvidados, ahí le vende un mapa y le recomienda visitar la tienda de su esposa Iselda en Bocasucia.Cornifer se encuentra en todas las zonas donde es posible conseguir un mapa. Los papeles en el suelo y su tarareo revelan su posición.Una vez que el jugador haya conseguido todos los mapas o derrotado a los 3 Soñadores, aparecerá en su tienda durmiendo..
-                            </p>
+                            <div class="npcs-content">
+                                <img src="../../assets/pictures/Npc's/Errantes/Cornifer_Circle.webp" alt="imagen del personaje Cornifer">
+                                <p>
+                                    El jugador se encuentra por primera vez a Cornifer en el fondo de Cruces Olvidados, ahí le vende un mapa y le recomienda visitar la tienda de su esposa Iselda en Bocasucia.Cornifer se encuentra en todas las zonas donde es posible conseguir un mapa. Los papeles en el suelo y su tarareo revelan su posición.Una vez que el jugador haya conseguido todos los mapas o derrotado a los 3 Soñadores, aparecerá en su tienda durmiendo..
+                                </p>
+                            </div>
                         </article>
                     </li>
                     <li>
                         <article id="zote">
                             <h4>Zote el Todopoderoso</h4>
-                            <img src="#" alt="imagen del personaje Zote el Todopoderoso">
-                            <p>
-                                Zote es un viajero de las afueras de Hallownest. Él vino al reino para cumplir una promesa; después se revela que fue una promesa de gloria para sí mismo.
-                            </p>
+                            <div class="npcs-content">
+                                <img src="../../assets/pictures/Npc's/Errantes/Zote_Circle.webp" alt="imagen del personaje Zote el Todopoderoso">
+                                <p>
+                                    Zote es un viajero de las afueras de Hallownest. Él vino al reino para cumplir una promesa; después se revela que fue una promesa de gloria para sí mismo.
+                                </p>
+                            </div>
                         </article>
                     </li>
                     <li>
                         <article id="cloth">
                             <h4>Cloth</h4>
-                            <img src="#" alt="imagen del personaje SalClothubra">
-                            <p>
-                                Una cigarra que viaja a Hallownest para convertirse en una verdadera guerrera. Toma al Caballero como inspiración. Sin embargo, aparece escondida bajo el suelo en varias ocasiones debido a su cobardía.
-                            </p>
+                            <div class="npcs-content">
+                                <img src="../../assets/pictures/Npc's/Errantes/Cloth_Circle.webp" alt="imagen del personaje SalClothubra">
+                                <p>
+                                    Una cigarra que viaja a Hallownest para convertirse en una verdadera guerrera. Toma al Caballero como inspiración. Sin embargo, aparece escondida bajo el suelo en varias ocasiones debido a su cobardía.
+                                </p>
+                            </div>
                         </article>
                     </li>
                 </ul>
             </article>
+            <article id="areas">
+                <h2>Áreas</h2>
+                <article id="dirtmouth">
+                    <h3>Bocasucia</h3>
+                    <div class="img-zoom">
+                        <picture>
+                            <img src="../../assets/pictures/Areas/Dirtmouth_Map_Clean.webp" alt="imagen del area bocasucia">
+                        </picture>
+                    </div>
+                    <p>
+                        Un pequeño pueblo situado en lo más alto de Hallownest, llegamos a él al poco de empezar el juego.
+                        Está conectada con Cruces Olvidados y Paso del Rey, el lugar donde el jugador empieza su aventura. También podemos ir hacia Cumbre de Cristal a través de un ascensor que tendremos que desbloquear.
+                    </p>
+                </article>
+                <article id="cityTears">
+                    <h3>Ciudad de Lágrimas</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/City_of_Tears_Map_Clean.webp" alt="imagen del area ciudad de lagrimas">
+                    </picture>
+                    <p>
+                        Capital de Hallownest y el corazón del Reino; el agua del Lago Azul cae constantemente, creando una lluvia perpetua. Se caracteriza, además, por la presencia de varias torres y edificios como el Santuario de Almas, la Torre del Vigía, Casa de los Placeres y la Torre del Amor.
+                    </p>
+                </article>
+                <article id="colosseumFools">
+                    <h3>Coliseo de los Insensatos</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/Colosseum_Of_Fools_Map_Clean.webp" alt="imagen del area coliseo de los insensatos">
+                    </picture>
+                    <p>
+                        El Coliseo de los Insensatos se encuentra en Límite del Reino, ahí el jugador puede participar en 3 pruebas en las cuales se enfrentará a oleadas de enemigos en una arena. Para desbloquear una Prueba, es necesario haber superado todas las anteriores y pagar una cantidad de Geo.
+                        Una vez se ha desbloqueado una Prueba, el jugador podrá realizarla todas las veces que quiera gratis.
+                        Los enemigos derrotados en el coliseo no sueltan Geo.
+                        Debajo de la arena hay una zona de descanso con un banco.
+                    </p>
+                </article>
+                <article id="crystalPeak">
+                    <h3>Cumbre de Cristal </h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/Crystal_Peak_Map_Clean.webp" alt="imagen del area cumbre de cristal">
+                    </picture>
+                    <p>
+                        Localizado al este de Bocasucia, es una alta montaña que fue usada en el pasado como mina por sus preciados cristales.
+                    </p>
+                </article>
+                <article id="deepnest">
+                    <h3>Nido Profundo</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/Deepnest_Map_Clean.webp" alt="imagen del area nido profundo">
+                    </picture>
+                    <p>
+                        Profundidad oculta en la esquina suroeste de Hallownest, repleta de toda variedad de arañas. Al oeste se encuentra Poblado distante, una gran estructura formada por telarañas y que contiene a la Soñadora Herrah
+                    </p>
+                </article>
+                <article id="royalWaterways">
+                    <h3>Canales Reales</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/Royal_Waterways_Map_Clean.webp" alt="imagen del area canales reales">
+                    </picture>
+                    <p>
+                        Un alcantarillado formado por una serie de tuberías de desagüe bajo la superficie de Ciudad de Lágrimas. Al este se encuentra un ascensor derruido debido al abandono. Por el noreste podemos encontrar un pozo que conecta con la sala de Emilitia en la Ciudad de Lágrimas.
+                    </p>
+                </article>
+                <article id="fogCanyon">
+                    <h3>Cañón Nublado</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/Fog_Canyon_Map_Clean.webp" alt="imagen del area cañon nubado">
+                    </picture>
+                    <p>
+                        Una pequeña zona repleta de niebla, burbujas y ácido. En el centro se sitúan los Archivos de la Maestra, casa de la Soñadora Monomon y sus experimentos.
+                    </p>
+                </article>
+                <article id="forgottenCrossroads">
+                    <h3>Cruces Olvidados</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/Forgotten_Crossroads_Map_Clean.webp" alt="imagen del area cruces olvidados">
+                    </picture>
+                    <p>
+                        Estas carreteras antaño eran concurridas por viajeros de todo Hallownest. Pero tras muchos años el deterioro, las plagas de bichos agresivos y los restos de antiguos habitantes, las han transformado en una zona peligrosa.
+                        Ésta es la primera área que el jugador explora en su totalidad y dónde se encuentran la mayoría de NPCs que luego irán a Bocasucia.
+                        Aquí se practicarán las primeras mecánicas "avanzadas" del jugador, desde peleas con mini-jefes, esquiva, y uso de hechizos.
+                    </p>
+                </article>
+                <article id="godHome">
+                    <h3>Hogar de Dioses</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/Godhome_Map_Clean.webp" alt="imagen del area hogar de dioses">
+                    </picture>
+                    <p>
+                        Se encuentra dentro de los sueños del Buscador de Dioses. Ahí el Caballero podrá enfrentarse a distintos desafíos y jefes.
+                    </p>
+                </article>
+                <article id="queensGarden">
+                    <h3>Jardines de la Reina</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/Queens_Gardens_Map_Clean.webp" alt="imagen del area jardines de la reina">
+                    </picture>
+                    <p>
+                        Una área llena de verjas ornamentadas, espinas y peligrosas plataformas situada al oeste Hallownest. En el pasado se trataba de los jardines de la Dama Blanca, pero fue invadida por las Mantis Traidoras que habían sido desterradas de su tribu.
+                    </p>
+                </article>
+                <article id="theHive">
+                    <h3>La Colmena</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/The_Hive_Map_Clean.webp" alt="imagen del area la colmena">
+                    </picture>
+                    <p>
+                        Situada al sur de Límite del Reino. A pesar de estar en Hallownest, las abejas se encuentran al margen de los asuntos del reino.
+                    </p>
+                </article>
+                <article id="kingdomEdge">
+                    <h3>Límite del Reino</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/Kingdom_Edge_Clean.webp" alt="imagen del area limite del reino">
+                    </picture>
+                    <p>
+                        Sitúada al extremo este de Hallownest y con una constante lluvia de ceniza se encuentra el Límite del Reino. Cuerpos procedentes del Coliseo de los Insensatos caen desde arriba para aterrizar en un lago de ácido. Al sureste del área se encuentra un profundo foso que conduce al mayor depósito de Geo del juego.
+                    </p>
+                </article>
+                <article id="whitePalace">
+                    <h3>Palacio Blanco</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/White_Palace_Map_Clean.webp" alt="imagen del area palacio blanco">
+                    </picture>
+                    <p>
+                        El palacio del rey pálido y su tribunal, esfumado misteriosamente de Hallownest un tiempo después de la infección.
+                        Para acceder al Palacio Blanco es necesario poseer el Aguijón Onírico Despertado (consiguiendo 1800 de esencia y hablando con la Vidente) y utilizarlo en el cuerpo de la Carcasa real que yace en el extremo sudeste de Cuenca Antigua.
+                        El Palacio Blanco es, por lo tanto, simplemente el recuerdo que dicha carcasa posee del lugar.
+                        Según el Buscador de Reliquias Lemm, este lugar fue el hogar del Rey Pálido, pero en algún momento indeterminado, simplemente se esfumó. Es de asumirse que aquel 'punto indeterminado' se trata del retorno de la infección.
+                    </p>
+                </article>
+                <article id="fungalWastes">
+                    <h3>Páramos Fúngicos</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/Fungal_Wastes_Map_Clean.webp" alt="imagen del area páramos fúngicos">
+                    </picture>
+                    <p>
+                        Son cavernas abarrotadas de esporas. A diferencia del resto de zonas de Hallownest, está habitada por seres fúngicos. Al sur, se encuentra la Aldea Mantis, y  al este, la Ciudad de Lágrimas.
+                    </p>
+                </article>
+                <article id="greenpPath">
+                    <h3>Sendero Verde</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/Greenpath_Map_Clean.webp" alt="imagen del area sendero verde">
+                    </picture>
+                    <p>
+                        Profundiades llenas de vegetación, protegidas por bichos cubiertos de plantas. La gran cantidad de ácido y vegetación dificultan el paso.
+                        Para acceder a la zona será necesario derrotar al "Baldur anciano" tras adquirir el Espíritu vengativo de manos del Chamán Caracol en el Montículo Ancestral. Tras acceder al Sendero Verde el jugador se encontrará a Hornet y la seguirá hasta encontrarla en su primer enfrentamiento.
+                    </p>
+                </article>
+                <article id="howlingCliffs">
+                    <h3>Acantilados Aulladores </h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/Howling_Cliffs_Map_Clean.webp" alt="imagen del area acantilados aulladores">
+                    </picture>
+                    <p>
+                        Un paraje yermo en el extremo noroeste de Hallownest. Escasamente ocupada por enemigos pero sustentado por los cadáveres de bichos de todos los tamaños. En el extremo oeste se encuentra un poderoso viento que empujará al jugador bloqueándole el paso.
+                    </p>
+                </article>
+                <article id="restingGrounds">
+                    <h3>Tierras de Reposo</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/Resting_Grounds_Map_Clean.webp" alt="imagen del area tierras de reposo">
+                    </picture>
+                    <p>
+                        Un gran cementerio situado al extremo este de Hallownest. El jugador llega por primera vez cayendo desde Cumbre de Cristal o usando el Tranvía. Aquí encontrará el monumento y la localización de los Soñadores, además de recibir el Aguijón Onírico.
+                    </p>
+                </article>
+                <article id="theAbyss">
+                    <h3>El Abismo</h3>
+                    <picture>
+                        <img src="../../assets/pictures/Areas/The_Abyss_Map_Clean.webp" alt="imagen del area abismo">
+                    </picture>
+                    <p>
+                        La zona más profunda de Hallownest, casi inhóspita. Aquí se encontraba originalmente el Palacio Blanco, hogar del Rey Pálido.
+                        Las ruinas del Palacio Blanco se pueden encontrar al este de la zona, junto con el cadáver de una carcasa real que habrá que golpear con el Aguijón Onírico para acceder.
+                    </p>
+                </article>
+            </article>
+            <article id="hollowSilksong">
+                <article class="banner">
+                    <h2>Hollow Knight Silksong</h2>
+                    <p>Silksong (<i onclick="guieOverlay()">banner</i>)
+                        es un videojuego que está siendo desarrollado por Team Cherry para Windows, macOS, Linux y Nintendo Switch. Es la secuela de Hollow Knight, aunque en esta ocasión el personaje jugable será Hornet, princesa protectora de Hallownest. La aventura transcurrirá a través de un nuevo reino gobernado por la seda y la canción, ella deberá luchar contra enemigos y resolver misterios mientras asciende en una peregrinación mortal a la cima del reino: la Ciudadela.
+                    </p>
+                </article>
+            </article>
         </section>
+        <footer class="footer">
+            <article>
+                <h2>Acerca de esta web</h2>
+                <span>
+                    El diseño y la web en sí mismo fueron creados para practicar y estudiar tecnologías. Kabam Games inc no respalda, patrocina ni se encarga de esta web.
+                </span>
+            </article>
+            <article>
+                <picture>
+                    <img src="../../assets/pictures/icon/Logo-tsn.svg" alt="logo de web">
+                </picture>
+            </article>
+            <article>
+                <h2>Licencia</h2>
+                <span>
+                    El contenido de este sitio tiene la licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional.
+                </span>
+            </article>
+            <article>
+                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0">
+                    <picture>
+                        <img class="img-license" src="../../assets/pictures/Licence-icon.png" alt="imagen de licencia creative commons">
+                    </picture>
+                </a>
+            </article>
+            <article>
+                <h2>Politica de privacidad</h2>
+                <span>
+                    Al continuar navegando por este sitio web, usted acepta el uso de cookies y la
+                    <a href="../policy/policy.html">
+                        <i>
+                            Política de privacidad
+                        </i>
+                    </a>.
+                </span>
+            </article>
+        </footer>
     </main>
     
+    
+    <script src="wikipedia.js"></script>
 </body>
 </html>

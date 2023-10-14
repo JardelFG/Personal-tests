@@ -6,7 +6,7 @@
     <title>Vanilla</title>
     <link rel="stylesheet" href="index.css">
     <link rel="preload" href="../assets/fonts/jost-vf.woff2" as="font" crossorigin>
-    <link rel="preload" href="../assets/fonts/victor-mono-500.woff2" as="font" crossorigin>
+    <!-- <link href="../assets/fonts/victor-mono-500.woff2" as="font" crossorigin> -->
   </head>
   <body>
     <div class="back_music">
@@ -652,59 +652,114 @@
           <section class="hollowChibi">
             <div>
               <img src="../assets/pictures/hollowchibi.png" alt="imagen de hollow knight">
-                <dialog id="alert-dialog">
+                <dialog id="alert-dialog_hollowChibi">
                   <h3>Otorgale tu energía al pequeño hollow!</h3>
-                  <img src="../assets/pictures/hollowchibi.png" alt="Gandalf">
+                  <img src="../assets/pictures/hollowchibi.png" alt="hollow chibi">
                   <progress value="10" max="50" id="progressBar"></progress>
                   <span><q>Triste...débil...uu</q></span>
                   <button onclick="restartProgressBar()">Acariciar</button>
                   <button onClick="this.parentElement.close()">Listo</button>
                 </dialog>
-                <button id="show-button">Dame un respiro</button>
+                <button id="show-dialog_hollowChibi">Dame un respiro</button>
             </div>
               <iframe id="hollow-knight-iframe"
                width="600" height="325" src="https://www.youtube.com/embed/hh4YjWIWisQ" title="Hollow Knight - Take a Walk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </section>
 
-          <section>
-            <form action="#">
-              <input type="text" list="items" placeholder="text">
-              <datalist id="items">
-                <option>Hollow</option>
-                <option>Hornet</option>
-                <option>Radiant</option>
-                <option>Radiant</option>
-              </datalist>
-            </form>
-
-            <details>
-              <summary>statistics</summary>
-              <span>feliz lunes</span><br>
-              <span>feliz martes</span><br>
-              <span>feliz miercoles</span><br>
-            </details>
+          <section class="carousel-main">
+            <article class="carousel">
+              <div class="slider">
+                <div class="slider-item">
+                  <img src="../assets/pictures/portada-hollow_knight.webp" alt="imagen de portada 1">
+                </div>
+                <div class="slider-item">
+                  <img src="../assets/pictures/carrousel-2.webp" alt="imagen de portada 2">
+                </div>
+                <div class="slider-item">
+                  <img src="../assets/pictures/carrousel-3.webp" alt="imagen de portada 3">
+                </div>
+                <div class="slider-item">
+                  <img src="../assets/pictures/carrousel-4.webp" alt="imagen de portada 3">
+                </div>
+              </div>
+            </article>
           </section>
 
+          <section>
+
           <section class="game-notes" id="game-notes">
-            <span>Notas sobre el juego</span>
+            <span>Notas y curiosidades</span>
             <div>
               <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nostrum ipsam laboriosam natus dolorem officiis deserunt at in laborum harum.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
-                <li>Existen ciertos enemigos eliminados del juego de los cuales se puede encontrar información de como son.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus quas dolorum modi cumque dolorem?</li>
+                <li>
+                  Los creadores del juego, Ari Gibson y William Pellen, son australianos y fundadores de Team Cherry. Ari afirma que empezó a sentir amor por los videojuegos jugando a Faxanadu en NES, mientras William asegura que su pasión por este mundo llegó de la mano de su padre mientras jugaban juntos a Zelda 2, también de NES
+                </li>
+                <li>
+                  El título fue galardonado con varios premios durante su año de lanzamiento en PC. Entre ellos destacan el de mejor juego de plataformas de los PC Game Awards y su nominación a mejor juego indie en los Game Awards 2017
+                </li>
+                <li>
+                  Todos los escenarios y personajes del juego están dibujados a mano. Este es un motivo más para perderse por sus maravillosas escenas y alucinar con lo que han sido capaces de crear desde el estudio australiano
+                </li>
+                <li>
+                  Aún más méritos podemos encontrar al saber que el videojuego fue creado por solamente 4 personas. Los dos codirectores de Team Cherry, Ari y William, se encargaron del arte y del diseño de niveles respectivamente. Hay que añadir a David Kazi que estuvo al mando del apartado técnico y a Christopher Larkin que es el responsable de su maravillosa banda sonora
+                </li>
+                <li>
+                  El diseño del personaje principal del juego fue recogido de un proyecto anterior de Team Cherry denominado Hungry Knight que se realizó en menos de 48 horas en un encuentro de desarrolladores nobeles
+                </li>
+                <li>
+                  El juego fue desarrollado gracias a una campaña de Kickstarter en el que los fans aportaron casi 60.000 dólares muy por encima de los 35.000 que sus desarrolladores habían fijado como meta
+                </li>
+                <li>
+                  En cierta fase del juego, se pueden leer mensajes escritos por las personas que aportaron dinero durante la campaña. Un carismático personaje del juego define a estas personas como “los que tuvieron fe”
+                </li>
+                <li>
+                  Existen ciertos enemigos eliminados del juego de los cuales se puede encontrar información de como son.
+                </li>
+                <li>
+                  Durante el juego hay varios guiños a otros videojuegos. El juego más referenciado es Dark Souls en el que se basan algunas de sus mecánicas. ¿Pero sabías que uno de los enemigos que encontramos en nuestro viaje está basado en un clásico contrincante de Super Mario Bros 3? En cuanto te cruces con él sabrás de qué personaje estamos hablando
+                </li>
+                <li>
+                  El juego dispone de tres posibles finales dependiendo de ciertos detalles de nuestra aventura. Además, si acabamos una misión secundaria muy particular obtendremos una escena extra
+                </li>
+                <li>
+                  La banda sonora del juego es una obra maestra compuesta por Christopher Larkin, quien también trabajó en la música para Ori and the Blind Forest
+                </li>
               </ul>
             </div>
           </section>
 
-          
       </main>
-  
+      <footer>
+        <article class="footer-carousel">
+          <div>
+            <a href="https://store.steampowered.com/app/367520/Hollow_Knight  ">Steam Hollow Knight</a>
+            <a href="https://hollowknight.fandom.com/es/wiki/Hollow_Knight_Wiki">Fandom(ES)</a>
+            <a href="https://hollowknight.fandom.com/wiki/Hollow_Knight_Wiki">Fandom(EN)</a>
+          </div>
+          <div style="animation: none;">
+            <a href="https://www.hollowknight.com">Hollow Knight (oficial)</a>
+            <a href="https://www.teamcherry.com.au">Team Cherry</a>
+          </div>
+          <div style="animation-direction: reverse;">
+            <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+              <img src="../assets/pictures/Licence-icon_short.png" alt="imagen de iconos de licencia">
+            </a>
+            <a href="https://es.wikipedia.org/wiki/Hollow_Knight">Wikipedia</a>
+            <a href="https://www.youtube.com/watch?v=mYEA5A0Bjyo">Playlist(youtube)</a>
+          </div>
+
+        </article>
+        <article class="footer-details">
+            <span>@2023 nombre web</span>
+            <span><a href="./policy/policy.html">politica de privaciddad</a></span>
+            <span><a href="https://github.com/JardelFG/Personal-tests/tree/main/tests-in/vanilla">Github</a></span>
+        </article>
+        <article class="footer-banner">
+          <picture>
+            <img src="../assets/pictures/banner-Hollow_Knight.jpg" alt="banner de la franquicia hollow knight">
+          </picture>
+        </article>
+      </footer>
       <script src="index.js"></script>
 </body>
 </html>
