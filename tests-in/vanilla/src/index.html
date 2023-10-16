@@ -16,16 +16,16 @@
         </audio>
         <button id="back_music__btn_audio">🔇</button>
     </div>
-    <div class="overlay" id="panelOverlay">
+    <div id="mainOverlay" popover="manual">
         <div class="bg-overlay">
-          <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, nemo?</span>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate doloremque, exercitationem illo distinctio iste odio blanditiis dolor architecto alias esse ipsa a nesciunt, nam commodi vero quas asperiores earum dolorem. Veniam adipisci perferendis odio eos fugiat a recusandae eum soluta delectus suscipit, asperiores dicta labore maiores, pariatur iste doloremque ipsum!</p>
-          <button class="overlay-close" onclick="switchOverlay()">✖️</button>
+          <span>Acerca de esta web</span>
+          <p>El diseño y la web en sí mismo fueron creados para practicar y estudiar tecnologías. Si continúa navegando por esta web daremos por aceptado las politicas de privacidad de esta web. Kabam Games inc no respalda, patrocina ni se encarga de esta web.</p>
+          <button class="overlay-close" onclick="closeMainOverlay()">✖️</button>
         </div>
       </div>
   
       <header class="nav-style nav-padding">
-        <button class="overlay-open" onclick="switchOverlay()" type="button">☑️</button>
+        <button class="overlay-open" type="button" popovertarget="mainOverlay" popovertargetaction="show">☑️</button>
         <nav>
           <ul>
             <span>

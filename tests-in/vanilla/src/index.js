@@ -13,10 +13,9 @@ btnAudio.addEventListener('click', ()=>{
 })
 
 // overlay logic
-function switchOverlay(){
-    const overlay = $("#panelOverlay")
-    
-    overlay.classList.toggle("switch")
+function closeMainOverlay(){
+    const overlay = $("#mainOverlay")
+    overlay.togglePopover()
 }
 
 // nav scroll style
