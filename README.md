@@ -1,6 +1,13 @@
 # This project
 
-Este proyecto sigue una estructura con la intención de poder probar en distintas tecnologías ya sean cambios o implementaciones nuevas correspondientes.
+Este proyecto sigue una estructura con la intención de poder probar en distintas tecnologías ya sean cambios o implementaciones nuevas correspondientes, todo en base a un proyecto de libreria sobre un tema en especifíco.
+
+## Technologies
+
+- Js vanila
+- React
+- tailwindcss
+- css/html
 
 ## Requisitos del Sistema
 
